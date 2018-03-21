@@ -8,6 +8,7 @@ import mysql.connector
 cnx = mysql.connector.connect(user='master', password='master', host='localhost', database='master')
 cursor = cnx.cursor()
 
+
 # read xes
 tree = ET.ElementTree(file='C:/Users/Christian/Google Drive/Uni/Master/5 Wintersemester 17-18/Masterarbeit/Test Data/ETM_Configuration1.xes')
 root = tree.getroot()
