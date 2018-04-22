@@ -5,12 +5,14 @@ root = tree.getroot()
 
 eventsTot = {}
 
+# Total Events
 def totalEvents():
     for entry in root:
         if entry.get('key') == 'meta_concept:named_events_total':
             test = entry.get('value')
             return test
 
+# Total per single Event
 def totalPerEvent():
     for entry in root:
         if entry.get('key') == 'meta_concept:named_events_total':
@@ -18,5 +20,6 @@ def totalPerEvent():
                 eventsTot[line.get('key')] = line.get('value')
             return eventsTot
 
+# main function
 if __name__ == '__main__':
     print(totalPerEvent())
